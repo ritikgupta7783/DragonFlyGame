@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer {
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.gameOver {
+    text-align: center;
+    font-size: 30px;
+}
+#scoreCount {
+    text-align: center;
+    font-size: 30px;
+}
+.dino {
+    background-image: url(littlewobg.png);
+    background-repeat: no-repeat;   
+    background-size: contain; /* ensures that image completely fits */
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 400px;
+}
+.obstacle {
+    width: 155px;
+    height: 130px;
+    background-size: cover;
+    background-image: url(danger.png);
+    position: absolute;
+    bottom: 0;
+    left: 85vw;
+}
+.animateDino {
+    animation: dino 0.6s linear;
+}
+.obstacleAni {
+    animation: obstacleAni 2s linear infinite; 
+}
+.gameOver {
+    visibility: hidden;
+}
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 400px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -10vw;
+    }
+}
